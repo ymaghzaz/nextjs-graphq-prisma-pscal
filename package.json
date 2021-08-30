@@ -1,0 +1,42 @@
+{
+  "name": "hello-next",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
+    "generate:prisma": "prisma generate",
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
+    "generate:nexus": "ts-node --transpile-only -P nexus.tsconfig.json pages/api"
+  },
+  "dependencies": {
+    "@apollo/client": "3.4.10",
+    "@prisma/client": "2.30.2",
+    "apollo-server-micro": "3.3.0",
+    "express": "4.17.1",
+    "graphql": "15.5.2",
+    "graphql-scalars": "1.10.0",
+    "graphql-tag": "2.12.5",
+    "micro": "9.3.4",
+    "micro-cors": "0.1.1",
+    "next": "11.1.1",
+    "nexus": "1.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-markdown": "6.0.3"
+  },
+  "devDependencies": {
+    "@types/graphql": "14.5.0",
+    "@types/micro-cors": "0.1.2",
+    "@types/node": "16.4.2",
+    "@types/react": "17.0.19",
+    "ts-node": "10.2.1",
+    "prisma": "2.30.2",
+    "typescript": "4.4.2"
+  }
+}
